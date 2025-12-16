@@ -1,9 +1,10 @@
-# Internet Cafe Management - Client
-# Python 3.10+
 
-# GUI Framework
 PyQt5==5.15.11
 
-# Database
 pymongo==4.15.5
 dnspython==2.8.0
+
+certifi>=2025.1.1
+
+numpy
+pygame

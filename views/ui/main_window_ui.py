@@ -385,7 +385,7 @@ class Ui_MainWindow(object):
 
 
 try:
-    from mainWindow import res_rc
+    from views.ui import res_rc
 except ImportError:
     import res_rc
 
