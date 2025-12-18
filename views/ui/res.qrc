@@ -1,29 +1,7 @@
 <RCC>
-  <qresource prefix="images">
-    <file>btn.png</file>
-    <file>theme.jpg</file>
-  </qresource>
-  <qresource prefix="PNG">
-    <file>PNG/A Valley Without Wind 2, v1.png</file>
-    <file>PNG/A Valley Without Wind 2, v2.png</file>
-    <file>PNG/AI War - Fleet Command.png</file>
-    <file>PNG/Dawnstar.png</file>
-    <file>PNG/English Country Tune, v1.png</file>
-    <file>PNG/English Country Tune, v2.png</file>
-    <file>PNG/Great Permutator.png</file>
-    <file>PNG/Intrusion 2, v1.png</file>
-    <file>PNG/Intrusion 2, v2.png</file>
-    <file>PNG/Momodora.png</file>
-    <file>PNG/Potatoman Seeks the Troof.png</file>
-    <file>PNG/Pressure.png</file>
-    <file>PNG/realMYST.png</file>
-    <file>PNG/Reconstruction Zero - I Miss The Sunrise.png</file>
-    <file>PNG/Reconstruction, The.png</file>
-    <file>PNG/Reus.png</file>
-    <file>PNG/Richard &amp; Alice.png</file>
-    <file>PNG/Shattered Haven, v1.png</file>
-    <file>PNG/Shattered Haven, v2.png</file>
-    <file>PNG/Shattered Haven, v3.png</file>
-    <file>PNG/Tidalis.png</file>
+  <qresource prefix="main">
+    <file>PNG/bg.jpg</file>
+    <file>PNG/game2.png</file>
+    <file>PNG/whitebg.png</file>
   </qresource>
 </RCC>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1226</width>
+    <height>742</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1401</width>
+      <height>971</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>1201</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/main/PNG/bg.jpg);</string>
+      </property>
+      <widget class="QPushButton" name="balls_game_btn">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>20</y>
+         <width>121</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/main/PNG/game2.png) 0 0 0 0 stretch stretch;
+background-size: cover;
+border: none;
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>140</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+font-size: 13px;
+</string>
+       </property>
+       <property name="text">
+        <string>Bouncing Balls</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="snake_btn">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>20</y>
+         <width>121</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/main/PNG/game2.png) 0 0 0 0 stretch stretch;
+background-color: transparent;
+border: none</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>140</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+font-size: 13px;
+</string>
+       </property>
+       <property name="text">
+        <string>Snake</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="flappy_btn">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>20</y>
+         <width>121</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/main/PNG/game2.png) 0 0 0 0 stretch stretch;
+background-color: transparent;;
+border: none</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>140</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+font-size: 13px;
+</string>
+       </property>
+       <property name="text">
+        <string>Flappy bird</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>950</x>
+         <y>310</y>
+         <width>231</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/PNG/PNG/whitebg.png);
+background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="deposit_btn">
+       <property name="geometry">
+        <rect>
+         <x>950</x>
+         <y>540</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/PNG/PNG/whitebg.png);
+</string>
+       </property>
+       <property name="text">
+        <string>Nạp tiền</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="changepwd_btn">
+       <property name="geometry">
+        <rect>
+         <x>950</x>
+         <y>600</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/PNG/PNG/whitebg.png);
+</string>
+       </property>
+       <property name="text">
+        <string>Đổi mật khẩu</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="support_btn">
+       <property name="geometry">
+        <rect>
+         <x>1070</x>
+         <y>540</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/PNG/PNG/whitebg.png);
+</string>
+       </property>
+       <property name="text">
+        <string>CSKH</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="logout_btn">
+       <property name="geometry">
+        <rect>
+         <x>1070</x>
+         <y>600</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/PNG/PNG/whitebg.png);
+</string>
+       </property>
+       <property name="text">
+        <string>Đăng xuất</string>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="time_lcd">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>470</y>
+         <width>111</width>
+         <height>51</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>960</x>
+         <y>480</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/PNG/PNG/whitebg.png);</string>
+       </property>
+       <property name="text">
+        <string>Thời gian</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>960</x>
+         <y>420</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/PNG/PNG/whitebg.png);</string>
+       </property>
+       <property name="text">
+        <string>Giá máy</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>960</x>
+         <y>360</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/PNG/PNG/whitebg.png);</string>
+       </property>
+       <property name="text">
+        <string>Số dư</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="username_lb">
+       <property name="geometry">
+        <rect>
+         <x>1030</x>
+         <y>310</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/PNG/PNG/whitebg.png);</string>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="balance_text">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>360</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/PNG/PNG/whitebg.png);</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="price_text">
+       <property name="geometry">
+        <rect>
+         <x>1060</x>
+         <y>420</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/PNG/PNG/whitebg.png);</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1226</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -4,9 +4,11 @@ from PyQt5.QtCore import pyqtSignal
 
 from controllers.base_controller import BaseController
 from controllers.auth_controller import AuthController
+from controllers.game_controller import Game_controller
 from services.socket_service import ClientSocketService
 from views.login_view import LoginView
 from views.main_view import MainView
+from views.ui import main_window
 
 
 class MainController(BaseController):
@@ -16,6 +18,7 @@ class MainController(BaseController):
         super(MainController, self).__init__(parent)
         
         self.auth_controller = AuthController()
+        self.game_controller = None
         
         self.socket_service = None
         
@@ -73,6 +76,7 @@ class MainController(BaseController):
     def _show_main_window(self):
         if self.main_view is None:
             self.main_view = MainView()
+            self.game_controller = Game_controller(self.main_view)
             self._connect_main_view_signals()
         self.main_view.show()
         

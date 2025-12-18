@@ -1,7 +1,8 @@
 
 from PyQt5 import QtWidgets, QtCore
 
-from views.ui.main_window_ui import Ui_MainWindow
+from views.ui.main_window import Ui_MainWindow
+
 
 
 class MainView(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -17,10 +18,12 @@ class MainView(QtWidgets.QMainWindow, Ui_MainWindow):
         self._connect_signals()
         
     def _connect_signals(self):
-        self.pushButton_2.clicked.connect(self.logout_requested.emit)
-        self.pushButton.clicked.connect(self.deposit_requested.emit)
-        self.pushButton_3.clicked.connect(self.change_password_requested.emit)
-        self.pushButton_4.clicked.connect(self.support_requested.emit)
+        self.logout_btn.clicked.connect(self.logout_requested.emit)
+        self.deposit_btn.clicked.connect(self.deposit_requested.emit)
+        self.changepwd_btn.clicked.connect(self.change_password_requested.emit)
+        self.support_btn.clicked.connect(self.support_requested.emit)
+
+        
         
     def update_balance(self, balance: float):
         self.lcdNumber.display(balance)

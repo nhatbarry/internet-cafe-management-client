@@ -13,14 +13,15 @@ def draw_arc(window, center, radius, start_angle, end_angle):
 	p1 = center + (radius+1000) * np.array([math.cos(start_angle),math.sin(start_angle)])
 	p2 = center + (radius+1000) * np.array([math.cos(end_angle),math.sin(end_angle)])
 	pygame.draw.polygon(window,BLACK, [center,p1,p2], 0)
+
 def is_ball_in_arc(ball_pos, CIRCLE_CENTER, start_angle, end_angle):
-    dx = ball_pos[0] - CIRCLE_CENTER[0]
-    dy = ball_pos[1] - CIRCLE_CENTER[1]
-    ball_angle = math.atan2(dy, dx)
-    end_angle = end_angle % (2 * math.pi)
-    start_angle = start_angle % (2 * math.pi)
-    if start_angle > end_angle:
-    	end_angle += 2 * math.pi
+	dx = ball_pos[0] - CIRCLE_CENTER[0]
+	dy = ball_pos[1] - CIRCLE_CENTER[1]
+	ball_angle = math.atan2(dy, dx)
+	end_angle = end_angle % (2 * math.pi)
+	start_angle = start_angle % (2 * math.pi)
+	if start_angle > end_angle:
+		end_angle += 2 * math.pi
 	if start_angle <= ball_angle <= end_angle or (start_angle <= ball_angle + 2 * math.pi <= end_angle):
 		return True
 pygame.init()
