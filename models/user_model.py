@@ -30,6 +30,16 @@ class UserModel:
             {'$set': data}
         )
         return result.modified_count > 0
+    
+    def update_user_by_username(self, username: str, data: dict) -> bool:
+        result = self.collection.update_one(
+            {'username': username},
+            {'$set': data}
+        )
+        return result.modified_count > 0
 
     def get_user_balance(self, user_id:str):
+        return self.collection.find_one({'user_id': user_id})['balance']
+    
+    def get_user_remaining_time(self, user_id:str):
         return self.collection.find_one({'user_id': user_id})['balance']

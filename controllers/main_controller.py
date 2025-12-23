@@ -51,7 +51,7 @@ class MainController(BaseController):
         if self.login_view:
             self.login_view.close()
             
-        self._show_main_window()
+        self._show_main_window(user)
         
         self._start_socket_service()
         
@@ -73,11 +73,15 @@ class MainController(BaseController):
             
         self._show_login()
         
-    def _show_main_window(self):
+    def _show_main_window(self, user: dict = None):
         if self.main_view is None:
             self.main_view = MainView()
             self.game_controller = Game_controller(self.main_view)
             self._connect_main_view_signals()
+        
+        if user:
+            self.main_view.set_user_info(user)
+            
         self.main_view.show()
         
     def _connect_main_view_signals(self):
@@ -85,9 +89,11 @@ class MainController(BaseController):
         self.main_view.deposit_requested.connect(self._handle_deposit)
         self.main_view.change_password_requested.connect(self._handle_change_password)
         self.main_view.support_requested.connect(self._handle_support)
+        self.main_view.closing.connect(self._handle_window_closing)
         
     def _handle_logout(self):
         if self.main_view.confirm_action("Đăng xuất", "Bạn có chắc muốn đăng xuất?"):
+            self._save_user_data()
             self.auth_controller.logout()
             
     def _handle_deposit(self):
@@ -128,11 +134,9 @@ class MainController(BaseController):
         self.log(f"Trạng thái kết nối: {status}")
         
     def _lock_screen(self):
-        """Khóa màn hình"""
         self.log("Khóa màn hình")
         
     def _unlock_screen(self):
-        """Mở khóa màn hình"""
         self.log("Mở khóa màn hình")
         
     def _shutdown(self):
@@ -140,7 +144,36 @@ class MainController(BaseController):
         
     def _restart(self):
         self.log("Khởi động lại")
+    
+    def _save_user_data(self):
+        if not self.main_view or not self.main_view.current_user:
+            return
+        
+        try:
+            self.main_view.stop_timer()
+            
+            data_to_save = self.main_view.get_user_data_to_save()
+            
+            if data_to_save:
+                username = self.main_view.current_user.get('username')
+                
+                from models.user_model import UserModel
+                user_model = UserModel()
+                success = user_model.update_user_by_username(username, data_to_save)
+                
+                if success:
+                    self.log(f"Đã lưu dữ liệu user: {username}, số dư còn lại: {data_to_save.get('balance', 0):.0f} VND")
+                else:
+                    self.log(f"Không thể lưu dữ liệu user: {username}")
+        except Exception as e:
+            self.log(f"Lỗi khi lưu dữ liệu user: {e}")
+    
+    def _handle_window_closing(self):
+        self.log("Đang đóng cửa sổ chính...")
+        self._save_user_data()
         
     def cleanup(self):
+        self._save_user_data()
+        
         if self.socket_service:
             self.socket_service.stop()
